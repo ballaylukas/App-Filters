@@ -2,7 +2,7 @@
 
 Webová mini aplikace fungující na bázi manipulace s daty transakcí a kombinovaného filtračního algoritmu.
 
-Vyzkoušejte [APP](https://ballaylukas.github.io/App-Bankist/)!
+Vyzkoušejte [APP](https://ballaylukas.github.io/App-Filters/)!
 
 ### Funkce aplikace
 * manipulace s transakčními daty (přidat / odebrat poslední / resetování dat)
