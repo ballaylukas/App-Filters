@@ -4,11 +4,14 @@
 // BUTTONS
 const btnMovementAdd = document.querySelector(".btn__movement--add");
 const btnMovementRemove = document.querySelector(".btn__movement--remove");
-const btnMovementReset = document.querySelector(".btn__movement--reset");
+const btnMovementRemoveAll = document.querySelector(
+  ".btn__movement--remove-all"
+);
 const btnFiltersSubmit = document.querySelector(".btn__filter--submit");
 const btnFiltersReset = document.querySelector(".btn__filter--reset");
 
 // INPUTS
+const inputMovementType = document.querySelector(".movement__input--type");
 const inputMovementAmount = document.querySelector(".movement__input--amount");
 const inputMovementDate = document.querySelector(".movement__input--date");
 const inputFilterType = document.querySelector(".filter__input--type");

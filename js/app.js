@@ -31,9 +31,9 @@ const removeAllWarnings = function () {
 
 // MOVEMENT VALUES CONTROL
 const checkMovement = function (amount, date) {
-  if (!amount || !date) {
+  if (amount <= 0 || !date) {
     // Amount
-    !amount
+    amount <= 0
       ? inputMovementAmount.classList.add("input__warning")
       : inputMovementAmount.classList.remove("input__warning");
 
@@ -163,12 +163,13 @@ btnMovementAdd.addEventListener("click", function (e) {
   e.preventDefault();
 
   // Values
+  const type = inputMovementType.value;
   const amount = +inputMovementAmount.value;
   const date = inputMovementDate.value;
 
   // Control new movement + add movement
   if (checkMovement(amount, date)) {
-    movements.push([amount, date]);
+    movements.push([type === "income" ? amount : -amount, date]);
 
     // UI movements
     displayMovements(movements);
@@ -189,11 +190,11 @@ btnMovementRemove.addEventListener("click", function (e) {
   removeAllWarnings();
 });
 
-// RESET MOVEMENTS
-btnMovementReset.addEventListener("click", function (e) {
+// REMOVE ALL MOVEMENTS
+btnMovementRemoveAll.addEventListener("click", function (e) {
   e.preventDefault();
 
-  // Reset movements
+  // Remove all movements
   movements.splice(0, movements.length);
 
   // UI movements
@@ -203,6 +204,7 @@ btnMovementReset.addEventListener("click", function (e) {
   removeAllWarnings();
 
   // Clear input fields
+  inputMovementType.value = "income";
   inputMovementAmount.value = "";
   inputMovementDate.value = "";
 });

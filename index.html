@@ -29,11 +29,22 @@
           <form class="form form__movement">
             <div class="inputs">
               <div class="input">
+                <label class="label">Type</label>
+                <select
+                  class="movement__input movement__input--type"
+                  name="type"
+                >
+                  <option value="income">Income</option>
+                  <option value="expenses">Expense</option>
+                </select>
+              </div>
+              <div class="input">
                 <label class="label">Amount</label>
                 <input
                   class="movement__input movement__input--amount"
                   type="number"
-                  title="Value must be positive or negative"
+                  min="0"
+                  title="Value must be greater than 0"
                 />
               </div>
               <div class="input">
@@ -45,21 +56,26 @@
               </div>
             </div>
             <div class="btns">
-              <button class="btn btn__movement--add" title="Add">
-                <span class="icon">&plus;</span>
+              <button class="btn btn__movement--add" title="Add data">
+                <span class="icon">Add</span>
               </button>
-              <button class="btn btn__movement--remove" title="Remove">
-                <span class="icon">&minus;</span>
+              <button
+                class="btn btn__movement--remove"
+                title="Remove last data"
+              >
+                <span class="icon">Remove</span>
               </button>
-              <button class="btn btn__movement--reset">Reset</button>
+              <button
+                class="btn btn__movement--remove-all"
+                title="Remove all data"
+              >
+                Remove all
+              </button>
             </div>
           </form>
           <div class="warning warning__movement">
             <ul>
-              <li>
-                Amount must be <strong>positive</strong> or
-                <strong>negative</strong>.
-              </li>
+              <li>Amount must be <strong>positive</strong>.</li>
               <li>Values must be <strong>defined</strong>.</li>
             </ul>
           </div>
@@ -112,8 +128,12 @@
               </div>
             </div>
             <div class="btns">
-              <button class="btn btn__filter--submit">Filter</button>
-              <button class="btn btn__filter--reset">Reset</button>
+              <button class="btn btn__filter--submit" title="Activate filters">
+                Filter
+              </button>
+              <button class="btn btn__filter--reset" title="Reset filters">
+                Reset
+              </button>
             </div>
           </form>
           <div class="warning warning__filter">
@@ -122,7 +142,8 @@
                 Amount must be <strong>positive</strong> or <strong>0</strong>.
               </li>
               <li>
-                Value <strong>to</strong> must be greater than or equal value
+                Value <strong>to</strong> must be
+                <strong>greater than or equal</strong> value
                 <strong>from</strong>.
               </li>
             </ul>
