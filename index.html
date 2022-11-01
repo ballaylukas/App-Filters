@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Filtering Algorithm</title>
+
+    <script defer src="./js/elements.js"></script>
+    <script defer src="./js/default.js"></script>
+    <script defer src="./js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <main>
+        <!-- MOVEMENT DATA -->
+        <section class="section section__movement">
+          <h2>Movement data</h2>
+          <form class="form form__movement">
+            <div class="inputs">
+              <div class="input">
+                <label class="label">Amount</label>
+                <input
+                  class="movement__input movement__input--amount"
+                  type="number"
+                  title="Value must be positive or negative"
+                />
+              </div>
+              <div class="input">
+                <label class="label">Date</label>
+                <input
+                  class="movement__input movement__input--date"
+                  type="date"
+                />
+              </div>
+            </div>
+            <div class="btns">
+              <button class="btn btn__movement--add" title="Add">
+                <span class="icon">&plus;</span>
+              </button>
+              <button class="btn btn__movement--remove" title="Remove">
+                <span class="icon">&minus;</span>
+              </button>
+              <button class="btn btn__movement--reset">Reset</button>
+            </div>
+          </form>
+          <div class="warning warning__movement">
+            <ul>
+              <li>
+                Amount must be <strong>positive</strong> or
+                <strong>negative</strong>.
+              </li>
+              <li>Values must be <strong>defined</strong>.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- FILTERS -->
+        <section class="section section__filters">
+          <h2>Filters</h2>
+          <form class="form form__filter">
+            <div class="inputs">
+              <div class="input">
+                <label class="label">Type</label>
+                <select class="filter__input filter__input--type" name="type">
+                  <option value="both">Both</option>
+                  <option value="income">Income</option>
+                  <option value="expenses">Expenses</option>
+                </select>
+              </div>
+              <div class="input">
+                <label class="label">Amount from</label>
+                <input
+                  class="filter__input filter__input--amount-from"
+                  type="number"
+                  min="0"
+                  title="Value must be greater than or equal 0"
+                />
+              </div>
+              <div class="input">
+                <label class="label">Amount to</label>
+                <input
+                  class="filter__input filter__input--amount-to"
+                  type="number"
+                  min="0"
+                  title="Value must be greater than or equal 0"
+                />
+              </div>
+              <div class="input">
+                <label class="label">Date from</label>
+                <input
+                  class="filter__input filter__input--date-from"
+                  type="date"
+                />
+              </div>
+              <div class="input">
+                <label class="label">Date to</label>
+                <input
+                  class="filter__input filter__input--date-to"
+                  type="date"
+                />
+              </div>
+            </div>
+            <div class="btns">
+              <button class="btn btn__filter--submit">Filter</button>
+              <button class="btn btn__filter--reset">Reset</button>
+            </div>
+          </form>
+          <div class="warning warning__filter">
+            <ul>
+              <li>
+                Amount must be <strong>positive</strong> or <strong>0</strong>.
+              </li>
+              <li>
+                Value <strong>to</strong> must be greater than or equal value
+                <strong>from</strong>.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- MOVEMENTES / FILTERED MOVEMENTS -->
+        <section class="section section__filtered">
+          <h2 class="heading__movements">Movements</h2>
+          <div class="filtered__container">
+            <div class="filtered">
+              <!-- <div class="filtered__row">
+            <div class="filtered__type filtered__type--income">&plus;</div>
+            <div class="filtered__date">18.10.2022</div>
+            <div class="filtered__amount">200,57 CZK</div>
+          </div>
+          <div class="filtered__row">
+            <div class="filtered__type filtered__type--expense">&minus;</div>
+            <div class="filtered__date">02.01.2022</div>
+            <div class="filtered__amount">-53,25 CZK</div>
+          </div> -->
+            </div>
+            <div class="filtered__nodata">No movements</div>
+          </div>
+        </section>
+      </main>
+
+      <!-- COPYRIGHT -->
+      <footer>
+        <p class="copyright">
+          &copy; <span class="current-year">&nbsp;</span> by Lukas Ballay
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
