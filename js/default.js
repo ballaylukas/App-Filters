@@ -16,6 +16,7 @@ const dateToday = dateFormat(new Date());
 const dateFilterStart = dateFormat(new Date(2020, 0, 1));
 const year = new Date().getFullYear();
 
+// ELEMENT ATTRIBUTE SETTING
 inputMovementDate.setAttribute("min", dateFilterStart);
 inputMovementDate.setAttribute("max", dateToday);
 inputFilterDateFrom.setAttribute("min", dateFilterStart);
@@ -24,7 +25,7 @@ inputFilterDateTo.setAttribute("min", dateFilterStart);
 inputFilterDateTo.setAttribute("max", dateToday);
 currentYear.textContent = year;
 
-// INIT DATA
+// INIT VARIABLES
 let filters,
   defaultValues,
   movements = [
