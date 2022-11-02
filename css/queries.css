@@ -1,0 +1,22 @@
+/* 1rem = 1em = 16px */
+
+@media screen and (max-width: 768px), screen and (max-height: 750px) {
+  body {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .btns {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .filtered__row {
+    gap: 1.6rem;
+
+    padding: 1.2rem 1.6rem;
+  }
+}
