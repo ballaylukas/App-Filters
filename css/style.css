@@ -99,7 +99,7 @@ h2 {
 
 input,
 select {
-  width: 12rem;
+  width: 12.8rem;
   height: 3.5rem;
   padding: 0.8rem;
   border: 1px solid var(--color-secondary);
@@ -110,6 +110,16 @@ select {
 
   background-color: var(--color-primary);
   color: inherit;
+}
+
+/* FOR FIREFOX */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:focus,
+input[type="number"]:hover {
+  -moz-appearance: auto;
 }
 
 /* INVERT CALENDAR ICON COLOR */
@@ -141,7 +151,7 @@ select {
 }
 
 .btn__movement--remove-all {
-  width: auto;
+  width: 8.8rem;
 }
 
 .btn__movement--add,
