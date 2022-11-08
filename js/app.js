@@ -118,11 +118,12 @@ const displayMovements = function (movs) {
     const movAmount = amount.toFixed(2).replace(".", ",");
 
     // HTML
-    const html = `<div class="filtered__row">
-  <div class="filtered__type filtered__type--${type}">${symbol}</div>
-  <div class="filtered__date">${movDate}</div>
-  <div class="filtered__amount">${movAmount} CZK</div>
-</div>`;
+    const html = `
+    <div class="filtered__row">
+      <div class="filtered__type filtered__type--${type}">${symbol}</div>
+      <div class="filtered__date">${movDate}</div>
+      <div class="filtered__amount">${movAmount} CZK</div>
+    </div>`;
 
     containerFiltered.insertAdjacentHTML("beforeend", html);
   });
@@ -222,6 +223,7 @@ btnFiltersSubmit.addEventListener("click", function (e) {
     filters[el] = currentValues[i] === "" ? defaultValues[i] : currentValues[i];
   });
 
+  // Convert string filter values to numbers
   filters.amountFrom = +filters.amountFrom;
   filters.amountTo = +filters.amountTo;
 
