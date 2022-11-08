@@ -1,22 +1,55 @@
 /* 1rem = 1em = 16px */
 
-@media screen and (max-width: 768px), screen and (max-height: 750px) {
+@media screen and (max-width: 960px) {
+  .input__date-from,
+  .input__date-to {
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 770px), screen and (max-height: 750px) {
   body {
     height: auto;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 770px) {
+  .input__amount,
+  .input__date,
+  .input__amount-from,
+  .input__amount-to {
+    grid-row: 2;
+  }
+
+  .input__date-from,
+  .input__date-to {
+    grid-row: 3;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .inputs {
+    grid-template-columns: 13rem;
+  }
+
+  .input {
+    grid-row: auto;
+  }
+}
+
+@media screen and (max-width: 470px) {
   .btns {
     flex-direction: column;
     align-items: flex-end;
   }
-}
 
-@media screen and (max-width: 450px) {
   .filtered__row {
-    gap: 1.6rem;
-
     padding: 1.2rem 1.6rem;
+
+    gap: 1.6rem;
+  }
+
+  .filtered__amount {
+    font-size: inherit;
   }
 }

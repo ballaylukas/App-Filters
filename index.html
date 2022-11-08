@@ -28,8 +28,8 @@
         <section class="section section__movement">
           <h2>Movement data</h2>
           <form class="form form__movement">
-            <div class="inputs">
-              <div class="input">
+            <div class="inputs inputs__movement">
+              <div class="input input__type">
                 <label class="label">Type</label>
                 <select
                   class="movement__input movement__input--type"
@@ -39,7 +39,7 @@
                   <option value="expenses">Expense</option>
                 </select>
               </div>
-              <div class="input">
+              <div class="input input__amount">
                 <label class="label">Amount</label>
                 <input
                   class="movement__input movement__input--amount"
@@ -48,7 +48,7 @@
                   title="Value must be greater than 0"
                 />
               </div>
-              <div class="input">
+              <div class="input input__date">
                 <label class="label">Date</label>
                 <input
                   class="movement__input movement__input--date"
@@ -86,8 +86,8 @@
         <section class="section section__filters">
           <h2>Filters</h2>
           <form class="form form__filter">
-            <div class="inputs">
-              <div class="input">
+            <div class="inputs inputs__filter">
+              <div class="input input__type">
                 <label class="label">Type</label>
                 <select class="filter__input filter__input--type" name="type">
                   <option value="both">Both</option>
@@ -95,7 +95,7 @@
                   <option value="expenses">Expenses</option>
                 </select>
               </div>
-              <div class="input">
+              <div class="input input__amount-from">
                 <label class="label">Amount from</label>
                 <input
                   class="filter__input filter__input--amount-from"
@@ -104,7 +104,7 @@
                   title="Value must be greater than or equal 0"
                 />
               </div>
-              <div class="input">
+              <div class="input input__amount-to">
                 <label class="label">Amount to</label>
                 <input
                   class="filter__input filter__input--amount-to"
@@ -113,14 +113,14 @@
                   title="Value must be greater than or equal 0"
                 />
               </div>
-              <div class="input">
+              <div class="input input__date-from">
                 <label class="label">Date from</label>
                 <input
                   class="filter__input filter__input--date-from"
                   type="date"
                 />
               </div>
-              <div class="input">
+              <div class="input input__date-to">
                 <label class="label">Date to</label>
                 <input
                   class="filter__input filter__input--date-to"

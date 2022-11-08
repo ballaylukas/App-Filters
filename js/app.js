@@ -205,8 +205,7 @@ btnMovementRemoveAll.addEventListener("click", function (e) {
 
   // Clear input fields
   inputMovementType.value = "income";
-  inputMovementAmount.value = "";
-  inputMovementDate.value = "";
+  inputMovementAmount.value = inputMovementDate.value = "";
 });
 
 // SUBMIT FILTERS
@@ -255,8 +254,9 @@ btnFiltersReset.addEventListener("click", function (e) {
 
   // Clear input fields
   inputFilterType.value = filters.type;
-  inputFilterAmountFrom.value = "";
-  inputFilterAmountTo.value = "";
-  inputFilterDateFrom.value = "";
-  inputFilterDateTo.value = "";
+  inputFilterAmountFrom.value =
+    inputFilterAmountTo.value =
+    inputFilterDateFrom.value =
+    inputFilterDateTo.value =
+      "";
 });
